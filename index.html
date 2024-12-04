@@ -3,18 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Countries Info</title>
+  <title>Countries Explorer</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>Countries Information</h1>
-    <input type="text" id="search" placeholder="Search by country name or region..." />
+    <h1>Countries Explorer</h1>
+    <div class="header-controls">
+      <input type="text" id="search" placeholder="Search by country name or region..." />
+      <div class="mode-controls">
+        <button id="theme-toggle">🌓 Toggle Theme</button>
+        <button id="favorites-toggle">❤️ Favorites</button>
+      </div>
+    </div>
   </header>
   
   <main>
     <div id="countries-container"></div>
   </main>
+
+  <div id="favorites-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Favorite Countries</h2>
+      <div id="favorites-list"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
